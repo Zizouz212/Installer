@@ -1,0 +1,64 @@
+Design Guidelines:
+
+_________________________________________________________
+| x _ +             Basic Installer                     |
+|-------------------------------------------------------|
+|                                                       |
+|                   Content Frame                       |
+|                                                       |
+|       Include any content, images or anything here    |
+|                                                       |
+|                                                       |
+|                                                       |
+|                                                       |
+|                                                       |
+|                                                       |
+|-------------------------------------------------------|
+| Status Frame - ProgressBar, text progress, next button|
+|_______________________________________________________|
+
+Each Frame shall have the following method, like an abstract class:
+
+create(*args) -> void       Called when the frame is to be created and displayed
+validate(*args) -> bool     Called when information has changed, or when the frame needs to be updated
+invoke(*args) -> void       Called when a UI element has been invoked, such as a button
+
+For the GUI, there should be one individual frame for each step of the installation process, in an effort to preserve
+simplicity and ease of access.
+
+There shall be seven steps to the installation process:
+
+1. Welcome Screen
+
+Here, the user shall be welcomed, and guided into the UI of the installer program.
+
+2. Overview of Installation
+
+Here, the user shall be informed of the program that they about to install, as well as the amount of space it will take on
+their hard drive. It will also outline the steps that will be taken in order for the program to be successfully installed.
+
+3. Overview of licenses/End User License Agreement
+
+Here, the user will be asked to confirm that they will follow the license/End User License Agreement. The continuation of the
+program will rely on the acceptance of the user agreement. The agreement shall be loaded from a file, contained within the application.
+
+4. Installation Path Configuration
+
+Here, the user will be asked to select a path to install the application. A File Dialog option will be provided for ease of
+use.
+
+5. Installation
+
+Here, progress will be shown concerning the installation, as well as an estimation of time remaining to complete the installation. A progressbar will be shown. At this frame, no user input shall be made. At this moment, the extraction of files and unpackaging, and movement shall take place.
+
+6. Summary
+
+Here, the user will be shown as summary report of the installation of the program, and whether it was successful. They will also be asked whether they would like to have a shortcut to the application to be placed on their desktop.
+
+7. Program Exit
+
+Self-explanatory: The program shall exit normally. Pretty simple right?
+
+----------------------------------------------------------------------------------------------------------------
+
+Any variable data shall be listed in the Resources.py file, for indexing. The license agreement to be accepted by the end user shall be located in a file called agreement.txt, with utf-8 encoding.
