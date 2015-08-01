@@ -65,4 +65,5 @@ Self-explanatory: The program shall exit normally. Pretty simple right?
 
 ----------------------------------------------------------------------------------------------------------------
 
-Any variable data shall be listed in the Resources.py file, for indexing. The license agreement to be accepted by the end user shall be located in a file called agreement.txt, with utf-8 encoding.
+Any variable data shall be listed in the Resources.py file, for indexing. The license agreement to be accepted by the end
+user shall be located in a file called agreement.txt, with utf-8 encoding.
