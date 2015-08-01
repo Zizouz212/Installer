@@ -40,7 +40,8 @@ their hard drive. It will also outline the steps that will be taken in order for
 3. Overview of licenses/End User License Agreement
 
 Here, the user will be asked to confirm that they will follow the license/End User License Agreement. The continuation of the
-program will rely on the acceptance of the user agreement. The agreement shall be loaded from a file, contained within the application.
+program will rely on the acceptance of the user agreement. The agreement shall be loaded from a file, contained within the
+application.
 
 4. Installation Path Configuration
 
@@ -49,11 +50,14 @@ use.
 
 5. Installation
 
-Here, progress will be shown concerning the installation, as well as an estimation of time remaining to complete the installation. A progressbar will be shown. At this frame, no user input shall be made. At this moment, the extraction of files and unpackaging, and movement shall take place.
+Here, progress will be shown concerning the installation, as well as an estimation of time remaining to complete the
+installation. A progressbar will be shown. At this frame, no user input shall be made. At this moment, the extraction of
+files and unpackaging, and movement shall take place.
 
 6. Summary
 
-Here, the user will be shown as summary report of the installation of the program, and whether it was successful. They will also be asked whether they would like to have a shortcut to the application to be placed on their desktop.
+Here, the user will be shown as summary report of the installation of the program, and whether it was successful. They will
+also be asked whether they would like to have a shortcut to the application to be placed on their desktop.
 
 7. Program Exit
 
