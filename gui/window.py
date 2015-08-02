@@ -15,6 +15,7 @@ class Window(Tkinter.Tk):
     def __init__(self):
         super().__init__()
         self._children = []
+        self.current_child = None
         
         
     def add_child(self, child) -> int:
@@ -33,6 +34,9 @@ class Window(Tkinter.Tk):
         """Returns the child at the specific index return by the add_child index."""
         
         return self._children[index]
+        
+    def get_current_child(self):
+        return self.winfo_children()[0]
         
 if __name__ is '__main__':
     window = Window()
