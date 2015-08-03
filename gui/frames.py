@@ -70,8 +70,9 @@ class StatusFrame(ttk.Frame, AbstractFrame):
     
     @override
     def on_invoke(self, source, *args):
-        self.parent.invoke(source, args)
-        self.parent.load_next()
+        self.parent.get_current_child().on_invoke(source, args)
+        self.parent.event_notify_all(source)
+        self.parent.load_next_frame()
     
 class WelcomeFrame(ttk.Frame, AbstractFrame):
     def __init__(self, parent, *args, **kw):
