@@ -14,6 +14,25 @@ import os
 
 base_path = os.path.dirname(os.path.abspath(__file__))
 
+class System:
+    os = None
+    name = None
+    version = None
+    
+    remaining_disk_space = 0
+    ram = 0
+    processor = None
+    processor_speed = 0
+    
+    
+    @staticmethod
+    def __init__(self = None):
+        System.os = platform.platform(terse=True)
+        System.name = platform.system()
+        System.version = platform.release()
+        
+        
+
 license, eula, welcome_text = read_file_data()
     
 def read_file_data():
