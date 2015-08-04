@@ -14,10 +14,15 @@ import os
 
 base_path = os.path.dirname(os.path.abspath(__file__))
 
-
-with open(os.path.join(base_path, "license.txt") as f:
-    license = f.read()
-
-with open(os.path.join(base_path, "eula.txt") as f:
-    eula = f.read()
+license, eula, welcome_text = read_file_data()
+    
+def read_file_data():
+    with open(os.path.join(base_path, 'license.txt') as f:
+        license = f.read()
+    with open(os.path.join(base_path, 'eula.txt') as f:
+        eula = f.read()
+    with open(os.path.join(base_path, 'welcome_text.txt') as f:
+        welcome_text = f.read()
+        
+    return license, eula, welcome_text
     
