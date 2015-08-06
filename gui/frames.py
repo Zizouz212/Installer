@@ -76,9 +76,41 @@ class StatusFrame(ttk.Frame, AbstractFrame):
     
 class WelcomeFrame(ttk.Frame, AbstractFrame):
     def __init__(self, parent, *args, **kw):
+        super().__init__(self, parent, args, kw)
         self.parent = parent
         self.kw = kw
         self.kw['_args'] = args
+        
+        
+    @override
+    def create(self, *args):
+        self.message = Tkinter.Text(self)
+        self.message['bd'] = 0
+        self.message['exportselection'] = 0
+        self.message['wrap'] = Tkinter.WORD
+        self.message.insert(
+            Resources.get_welcome_message())
+        
+        return
+        
+    
+    
+    @override
+    def validate(self, *args):
+        pass
+    
+    @override
+    def on_invoke(self, source, *args):
+        if source is 'next_button':
+            pass
+        return
+    
+
+class OverviewFrame(ttk.Frame, AbstractFrame):
+    def __init__(self, parent, *args, **kw):
+        super().__init__(self, parent, args, kw)
+        
+        
         
         
     @override
@@ -91,9 +123,7 @@ class WelcomeFrame(ttk.Frame, AbstractFrame):
     
     @override
     def on_invoke(self, source, *args):
-        if source is 'next_button':
-            pass
-        return
+        pass
     
 
     
